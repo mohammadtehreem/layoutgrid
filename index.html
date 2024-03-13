@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      .container {
+        width: 100%;
+        display: grid;
+        grid-template-areas:
+          "a b"
+          "c c";
+      }
+
+      .div-logo {
+        grid-area: a;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: darkblue;
+        height: auto;
+      }
+      .img-wrapper {
+        width: 45%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .div-logo img {
+        width: 100%;
+      }
+
+      .div-links {
+        height: 85vh;
+        grid-area: b;
+        background-color: blue;
+        display: flex;
+        align-items: center;
+      }
+
+      .div-links > div {
+        margin: 40px;
+      }
+
+      .div-links p,
+      h3 {
+        margin: 60px 30px 60px 30px;
+        color: white;
+      }
+
+      .div-footer {
+        background-color: black;
+        grid-area: c;
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .div-footer a,
+      span {
+        margin: 0 15px 0 15px;
+        color: white;
+        text-decoration: none;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          grid-template-areas:
+            "c c"
+            "b b"
+            "a a";
+        }
+
+        .div-links {
+          display: block;
+          height: fit-content;
+        }
+
+        .div-links > div {
+          margin: auto;
+        }
+        .div-links p {
+          display: none;
+        }
+
+        .div-footer a,
+        span {
+          font-size: xx-small;
+          margin: 0 5px 0 5px;
+        }
+      }
+
+      @media (min-width: 481px) and (max-width: 1024px) {
+        .container {
+          grid-template-areas:
+            "b b"
+            "a a"
+            "c c";
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="div-logo">
+        <div class="img-wrapper">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="div-links">
+        <div>
+          <h3>Shop</h3>
+          <p>Gift Cards</p>
+          <p>Etsy</p>
+          <p>Sitemap</p>
+          <p>Etsy Blog</p>
+          <p>Etsy Germany</p>
+          <p>Etsy Canada</p>
+        </div>
+        <div>
+          <h3>Sell</h3>
+          <p>Gift Cards</p>
+          <p>Etsy</p>
+          <p>Sitemap</p>
+          <p>Etsy Blog</p>
+          <p>Etsy Germany</p>
+          <p>Etsy Canada</p>
+        </div>
+        <div>
+          <h3>About</h3>
+          <p>Gift Cards</p>
+          <p>Etsy</p>
+          <p>Sitemap</p>
+          <p>Etsy Blog</p>
+          <p>Etsy Germany</p>
+          <p>Etsy Canada</p>
+        </div>
+        <div>
+          <h3>Shop</h3>
+          <p>Gift Cards</p>
+          <p>Etsy</p>
+          <p>Sitemap</p>
+          <p>Etsy Blog</p>
+          <p>Etsy Germany</p>
+          <p>Etsy Canada</p>
+        </div>
+      </div>
+      <div class="div-footer">
+        <div>
+          <a href="">India</a><a href="">English</a><a href="">(INR)</a>
+        </div>
+        <div>
+          <span></span><a href="">Terms of Use</a><a href="">Privacy</a
+          ><a href="">Interest-based ads</a><a href="">Local Shops</a
+          ><a href="">Regions</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
